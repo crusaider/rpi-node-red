@@ -1,7 +1,6 @@
 # Base the image on a stable branch of Node.js
-FROM hypriot/rpi-node:4.4.3-wheezy
+FROM hypriot/rpi-node:6.10.0-slim
 
-MAINTAINER Jonas <jonas.m.andreasson@gmail.com>
 
 # Install node red
 RUN npm install -g --unsafe-perm node-red
@@ -15,4 +14,4 @@ COPY settings.js /node-red/
 # VOLUME /node-red/user-dir
 EXPOSE 1880
 
-CMD /node-red/start-node-red.sh
+#CMD /node-red/start-node-red.sh
